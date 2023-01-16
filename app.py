@@ -56,6 +56,11 @@ def wish_get():
 def fortunetellingPage():
     return render_template('fortunetelling.html')
 
+# 신년 운세 모두 조회
+@app.route('/fortunetelling', methods=['GET'])
+def allFortuneTelling():
+    allFortune = list(db.fortune.find({},{'_id' : False}));
+    return jsonify({'allFortune': allFortune});
 
 
 
