@@ -1,0 +1,48 @@
+* {
+    font-family: 'Gowun Dodum', sans-serif;
+}
+
+.wishLookPage {
+    background-color: #2c3e50;
+}
+
+.wishLookPage .back-image {
+    width: 95%;
+    max-width: 700px;
+    background-image: url("https://user-images.githubusercontent.com/96133075/212673758-948e2efe-7cf4-47df-b3b4-702e998b8443.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: auto;
+    display: block;
+}
+
+.wish-list-all {
+    width: 95%;
+    max-width: 500px;
+    margin: 0px auto 30px auto;
+    padding: 20px;
+}
+
+.wish-list-all .wish-nickname {
+    font-size: larger;
+    font-weight: bold;
+    margin-top: 10px;
+    background-color: transparent;
+    color: white;
+}
+
+.wish-list-all .wish-content {
+    color: white;
+    font-size: large;
+    display: inline-block;
+    white-space: normal;
+    width: 325px;
+}
+
+.wish-list-all .wish-area {
+    margin-bottom: 40px;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+}

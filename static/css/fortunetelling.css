@@ -1,0 +1,45 @@
+* {
+    font-family: 'Gowun Dodum', sans-serif;
+}
+
+.fortunetellingPage{
+    background-color: #2c3e50;
+    padding: 30px;
+}
+
+.fortunetellingPage > h4
+ {
+    margin:auto;
+    color: white;
+    text-align: center;
+    background-color: #2c3e50;
+    width: 95%;
+    max-width: 700px;
+}
+
+.accordion-flush
+ {
+    width: 400px;
+    margin: auto;
+    font-size: 15px;
+    margin-top: 50px;
+}
+
+.accordion-button{
+    font-size: 15px;
+}
+
+fortunetellingPage > p{
+    height: 50px;
+}
+.year-box {
+    list-style: none;
+    font-size: 0.81111em;
+    padding: 1rem 1.25rem;
+}
+.year-box li{
+    margin-bottom: 5px;
+}
+.year{
+    color:orange;
+}

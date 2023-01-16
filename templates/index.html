@@ -4,45 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🐰소원을말해봐</title>
+    <title>소원을 말해봐 🐰</title>
     <meta property="og:title" content="🐰소원을말해봐"/>
     <meta property="og:description" content="다가오는 토끼의 해! 달 토끼에게 소원을 빌어보자🐰"/>
     <meta property="og:image"
-          content="#"/>
+          content="https://blogfiles.pstatic.net/MjAyMzAxMTdfMjgx/MDAxNjczODk3ODU2NTAz.1lwQzqjRNifVLSGddgV2kMU0k1T3qQ0Muip-OixZcHYg.Ih_PgwvE1lU2U_7lHYxdswtis0WsKJmXDs-5mMKp8kUg.JPEG.apples2051/7598391.jpg"/>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
     <link href="/static/css/main.css" rel="stylesheet">
+          <link rel="icon" href="https://blog.kakaocdn.net/dn/Azuyp/btrWq9GKEEv/hlQrRO0KfeVHj0Wvv0eckk/favicon.ico?attach=1&knm=tfile.ico" type="image/x-icon" sizes="16x16">
+
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
     <script defer src="/static/js/main.js"></script>
 </head>
 <body>
-    <div class="header">
-        <div class="mytitle">
-            <h1>소원을 말해봐</h1>
-        </div>
-        <div class="main-image">
-            <h1>메인 이미지 자리</h1>
-        </div>
-        <div class="mymenu">
-            <ul>
-                <li><a href="/fortunetelling">신년 운세</a></li>
-                <li><a href="/wish/regist">소원 빌기</a></li>
-                <li><a href="/wish/look">소원 보기</a></li>
-            </ul>
+<div class="header">
+    <div class="main-image"></div>
+    <div class="mymenu">
+        <ul>
+            <li><a href="/fortunetelling-page">| 신년운세 |</a></li>
+            <li><a href="/wish-regist-page">| 소원빌기 |</a></li>
+            <li><a href="/wish-look-page">| 소원보기 |</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+<!-- 소원 빌기 페이지 -->
+<div class="wishpage">
+    <h4>다가오는 토끼의 해!</h4>
+    <h4>달토끼에게 소원을 빌어보자🐰</h4>
+
+
+
+<div class="blank">
+    <h1>   .... </h1>
+
+</div>
+
+
+    <div class="myback">
+        <div class="mypost">
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="nickname-input" placeholder="name@example.com">
+                <label for="floatingInput">닉네임을 입력해 주세요.</label>
+            </div>
+            <div class="form-floating">
+        <textarea class="form-control" placeholder="Leave a comment here" id="comment-input"
+                  style="height: 100px"></textarea>
+                <label for="floatingTextarea2">소원을 입력해 주세요.</label>
+            </div>
+            <div class="mybtns">
+                <button type="submit" class="buttonsize btn btn-primary" onclick="save_wish()">등록</button>
+            </div>
         </div>
     </div>
 
-
-    <!-- 소원 빌기 페이지 -->
-    <div class="wishpage">
-        <h1>소원빌기 페이지 입니다. 메인입니다.</h1>
-    </div>
-
+</div>
 </body>
 </html>
+
