@@ -15,7 +15,7 @@ def home():
     return render_template('index.html')
 
 # 소원 빌기 페이지
-@app.route('/wish/regist', methods=["GET"])
+@app.route('/wish-regist-page', methods=["GET"])
 def wishRegisterPage():
     return render_template('index.html')
 
@@ -41,12 +41,12 @@ def wishSave():
 
 
 # 소원 보기 페이지
-@app.route('/wish/look', methods=["GET"])
+@app.route('/wish-look-page', methods=["GET"])
 def wishLookPage():
     return render_template('wishLook.html')
 
 # 신년 운세 페이지
-@app.route('/fortunetelling', methods=["GET"])
+@app.route('/fortunetelling-page', methods=["GET"])
 def fortunetellingPage():
     return render_template('fortunetelling.html')
 
