@@ -45,10 +45,17 @@ def wishSave():
 def wishLookPage():
     return render_template('wishLook.html')
 
+# 소원 조회
+@app.route('/wish/look', methods=["GET"])
+def wish_get():
+    wish_list = list(db.wishes.find({}, {'_id': False}))
+    return jsonify({'wish_list': wish_list})
+
 # 신년 운세 페이지
 @app.route('/fortunetelling-page', methods=["GET"])
 def fortunetellingPage():
     return render_template('fortunetelling.html')
+
 
 
 
