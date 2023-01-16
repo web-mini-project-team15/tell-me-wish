@@ -31,3 +31,14 @@
 fortunetellingPage > p{
     height: 50px;
 }
+.year-box {
+    list-style: none;
+    font-size: 0.81111em;
+    padding: 1rem 1.25rem;
+}
+.year-box li{
+    margin-bottom: 5px;
+}
+.year{
+    color:orange;
+}
