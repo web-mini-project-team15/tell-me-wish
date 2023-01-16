@@ -1,10 +1,10 @@
 from flask import Flask, render_template, request, jsonify
 from pymongo import MongoClient
-#
-# f = open('dbproperties', 'r', encoding="utf-8")
-# db_conn_info = f.readline()
-# client = MongoClient(db_conn_info)
-# db = client.playlist
+
+f = open('dbproperties', 'r', encoding="utf-8")
+db_conn_info = f.readline()
+client = MongoClient(db_conn_info)
+db = client.wish
 
 app = Flask(__name__)
 
@@ -14,7 +14,7 @@ def home():
     return render_template('index.html')
 
 # 소원 빌기 페이지
-@app.route('/wish/regist', methods=["GET"])
+@app.route('/wish/regist')
 def wishRegisterPage():
     return render_template('index.html')
 
@@ -23,11 +23,16 @@ def wishRegisterPage():
 def wishLookPage():
     return render_template('wishLook.html')
 
+# 소원 조회
+@app.route('/wish/look', methods=["GET"])
+def wish_get():
+    wish_list = list(db.wishes.find({}, {'_id': False}))
+    return jsonify({'wish_list': wish_list})
+
 # 신년 운세 페이지
 @app.route('/fortunetelling', methods=["GET"])
 def fortunetellingPage():
     return render_template('fortunetelling.html')
-
 
 if __name__ == '__main__':
     app.run('0.0.0.0', port=5000, debug=True)
