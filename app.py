@@ -2,12 +2,10 @@ import pymongo.errors
 from flask import Flask, render_template, request, jsonify
 from pymongo import MongoClient
 from bson.json_util import dumps, ObjectId
-import certifi
 
-ca = certifi.where()
 f = open('dbproperties', 'r', encoding="utf-8")
 db_conn_info = f.readline()
-client = MongoClient('mongodb+srv://fifteen:fifteen15@cluster0.cjoz9oy.mongodb.net/Cluster0?retryWrites=true&w=majority', tlsCAFile=ca)
+client = MongoClient(db_conn_info)
 db = client.wish
 
 app = Flask(__name__)
