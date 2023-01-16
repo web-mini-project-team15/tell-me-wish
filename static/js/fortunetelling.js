@@ -23,12 +23,12 @@ function show_fortunetelling() {
                 let year5_text = rows[i]['yearsInfo'][4][' yearText']
 
                 let html_temp = `<div class="accordion-body">${totalText}</div>
-                                     <ul>
-                                        <li>${year1} : ${year1_text}</li>
-                                        <li>${year2} : ${year2_text}</li>
-                                        <li>${year3} : ${year3_text}</li>
-                                        <li>${year4} : ${year4_text}</li>
-                                        <li>${year5} : ${year5_text}</li>                                      
+                                     <ul class="year-box">
+                                        <li><span class="year">${year1} :</span> ${year1_text}</li>
+                                        <li><span class="year">${year2} :</span> ${year2_text}</li>
+                                        <li><span class="year">${year3} :</span> ${year3_text}</li>
+                                        <li><span class="year">${year4} :</span> ${year4_text}</li>
+                                        <li><span class="year">${year5} :</span> ${year5_text}</li>                                      
                                      </ul>`
                 switch (i) {
                     case 0:
