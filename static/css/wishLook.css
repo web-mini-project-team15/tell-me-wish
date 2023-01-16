@@ -35,6 +35,9 @@
 .wish-list-all .wish-content {
     color: white;
     font-size: large;
+    display: inline-block;
+    white-space: normal;
+    width: 325px;
 }
 
 .wish-list-all .wish-area {
