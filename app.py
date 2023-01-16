@@ -19,7 +19,7 @@ def wishRegisterPage():
     return render_template('index.html')
 
 # 소원 보기 페이지
-@app.route('/wish/look', methods=["GET"])
+@app.route('/wish-look-page', methods=["GET"])
 def wishLookPage():
     return render_template('wishLook.html')
 
