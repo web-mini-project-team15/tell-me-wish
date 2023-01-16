@@ -57,10 +57,7 @@ def wish_get():
 @app.route('/wish/like', methods=['POST'])
 def like_save():
     id_recieve = str(request.form['id_give'])
-    objectid = "ObjectId('" + id_recieve + "')"
-    print(objectid)
     like_count = db.wishes.find_one({'_id': ObjectId(id_recieve)})['likeCount']
-    print(like_count)
     try:
         db.wishes.update_one({'_id': ObjectId(id_recieve)}, {'$set': {'likeCount': like_count + 1}})
         return jsonify({'status': '200'})
