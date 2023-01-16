@@ -1,0 +1,26 @@
+* {
+    font-family: 'Gowun Dodum', sans-serif;
+}
+
+.gif-image {
+    margin: auto;
+    background-position: center center;
+    background-size: cover;
+    width: 600px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.29);
+    border-radius: 70px;
+    background-image: url('https://blog.kakaocdn.net/dn/bCskrq/btrWr5RnC0K/T19PgLtzRRCH9lKBEFNeb1/img.gif');
+}
+
+.blank{
+    margin: auto;
+    background-position: center center;
+    background: no-repeat;
+    width: 560px;
+    height: 200px;
+}

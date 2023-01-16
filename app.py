@@ -39,7 +39,10 @@ def wishSave():
         except :
             return jsonify({'status': '500'})
 
-
+# 소원 등록 모션 페이지
+@app.route('/wish-moving-page')
+def wishMovingPage():
+    return render_template('moving.html')
 
 # 소원 보기 페이지
 @app.route('/wish-look-page')

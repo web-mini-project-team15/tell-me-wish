@@ -14,7 +14,7 @@ function save_wish() {
         success: function (response) {
             if(response["status"] == '200') {
                 alert("소원 빌기 완료!")
-                window.location.replace('/wish-look-page')
+                window.location.replace('/wish-moving-page')
             } else if (response["status"] == '400') {
                 alert("닉네임 또는 소원을 꼭 입력해주세요!")
                 window.location.reload()
