@@ -1,6 +1,7 @@
 import pymongo.errors
 from flask import Flask, render_template, request, jsonify
 from pymongo import MongoClient
+from bson.json_util import dumps, ObjectId
 
 f = open('dbproperties', 'r', encoding="utf-8")
 db_conn_info = f.readline()
@@ -48,8 +49,23 @@ def wishLookPage():
 # 소원 조회
 @app.route('/wish/look', methods=["GET"])
 def wish_get():
-    wish_list = list(db.wishes.find({}, {'_id': False}))
-    return jsonify({'wish_list': wish_list})
+    wish_list = list(db.wishes.find({}))
+    return jsonify({'wish_list': dumps(wish_list)})
+    # return jsonify({'wish_list': wish_list})
+
+# 좋아요 등록
+@app.route('/wish/like', methods=['POST'])
+def like_save():
+    id_recieve = str(request.form['id_give'])
+    objectid = "ObjectId('" + id_recieve + "')"
+    print(objectid)
+    like_count = db.wishes.find_one({'_id': ObjectId(id_recieve)})['likeCount']
+    print(like_count)
+    try:
+        db.wishes.update_one({'_id': ObjectId(id_recieve)}, {'$set': {'likeCount': like_count + 1}})
+        return jsonify({'status': '200'})
+    except:
+        return jsonify({'status': '500'})
 
 # 신년 운세 페이지
 @app.route('/fortunetelling-page')
