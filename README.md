@@ -44,3 +44,6 @@
     - 신년 운세 크롤링
         - +) 매일 밤 12시 신년운세 업데이트 - 스크립트 작성
     - 신년 운세 조회 기능
+
+## 💡 시연영상
+[![Video Label](http://img.youtube.com/vi/UhCYRomqK3w/0.jpg)](https://youtu.be/UhCYRomqK3w)
